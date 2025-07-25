@@ -1,5 +1,5 @@
 {
-  "name": "dynamikaweb/yii2-responsive-menu",
+  "name": "dynamikasolucoesweb/yii2-responsive-menu",
   "description": "Complex, adaptable, responsive and self-correcting menu.",
   "type": "yii2-extension",
   "keywords": ["dynamika", "yii2", "menu", "responsive"],
@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "dynamikaweb\\responsive\\": "src"
+      "dynamikasolucoesweb\\responsive\\": "src"
     }
   },
   "repositories": [
