@@ -15,7 +15,7 @@
     "issues": "http://github.com/dynamikaweb/yii2-responsive-menu/issues",
     "source": "http://github.com/dynamikaweb/yii2-responsive-menu"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "require": {
     "php": ">=7.4",
     "yiisoft/yii2": "*"
