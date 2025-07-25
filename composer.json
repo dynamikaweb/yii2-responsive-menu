@@ -1,0 +1,34 @@
+{
+  "name": "dynamikaweb/yii2-responsive-menu",
+  "description": "Complex, adaptable, responsive and self-correcting menu.",
+  "type": "yii2-extension",
+  "keywords": ["dynamika", "yii2", "menu", "responsive"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Giordani da Silveira dos Santos",
+      "email": "giordani@dynamika.com.br",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "http://github.com/dynamikaweb/yii2-responsive-menu/issues",
+    "source": "http://github.com/dynamikaweb/yii2-responsive-menu"
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.4",
+    "yiisoft/yii2": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "dynamikaweb\\responsive\\": "src"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
