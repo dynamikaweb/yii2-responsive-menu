@@ -35,7 +35,7 @@ class Menu extends \yii\base\Widget
         }
 
         /** render widget */
-        $content = $this->renderFile('forest', [
+        $content = $this->renderFile('wrapper', [
             'items' => $this->renderItems($this->normalizeItems(), self::NIVEL_ROOT),
             'id' => $this->getId(),
         ]);
@@ -135,7 +135,7 @@ class Menu extends \yii\base\Widget
         switch ($nivel)
         {
             case self::NIVEL_ROOT: {
-                return implode("\n", array_map(fn($item) => $this->renderFile('root', [
+                return implode("\n", array_map(fn($item) => $this->renderFile('first', [
                     'items' => empty($item['items'])? null: Html::tag('span', $this->renderItems($item['items'], self::NIVEL_SUB), ['class' => 'dynamika-menu-span-items']),
                     'target' => $item['target'],
                     'label' => $item['label'],
@@ -146,7 +146,7 @@ class Menu extends \yii\base\Widget
                 ));
             }
             case self::NIVEL_SUB: {
-                return implode("\n", array_map(fn($item) => $this->renderFile('sub', [
+                return implode("\n", array_map(fn($item) => $this->renderFile('second', [
                     'items' => $this->renderItems($item['items'], self::NIVEL_URL),
                     'content' => empty($item['content'])? null: Html::tag('p', $item['content']),
                     'label' => empty($item['label'])? null: Html::a("<h3>{$item['label']}</h3>", $item['url']),

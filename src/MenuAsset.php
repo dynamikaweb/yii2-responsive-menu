@@ -7,9 +7,12 @@ class MenuAsset extends \yii\web\AssetBundle
     public $sourcePath = '@vendor/dynamikasolucoesweb/yii2-responsive-menu/assets';
 
     public $files = [
+        'wrapper' => 'menu-wrapper.html',
+        'first' => 'menu-first.html',
+        'second' => 'menu-second.html',
         'forest' => 'menu-forest.html',
         'link' => 'menu-link.html',
-        'root' => 'menu-root.html',
+        //'root' => 'menu-root.html',
         'sub' => 'menu-sub.html'
     ];
 
@@ -18,9 +21,9 @@ class MenuAsset extends \yii\web\AssetBundle
     ];
 
     public $js = [
-        'js/script.js',
+        'js/modernizr.custom.js',
         'js/dlmenu.js',
-        'js/modernizr.js',
+        'js/script.js',
     ];
 
     public function getFile(string $view): string
