@@ -16,7 +16,7 @@ class Menu extends \yii\base\Widget
     public array $items = [];
     public int $maxItems = 5;
 
-    private array $_asset;
+    private $_asset;
     private string $_key_cache;
 
     /**
@@ -167,7 +167,7 @@ class Menu extends \yii\base\Widget
         }
     }
 
-    public function renderFile(string $view, array $params = []): string
+    public function renderFile($view, $params = []): string
     {
         $placeholders = [];
 

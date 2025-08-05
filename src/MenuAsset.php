@@ -4,20 +4,20 @@ namespace dynamikasolucoesweb\responsive;
 
 class MenuAsset extends \yii\web\AssetBundle
 {
-    public string $sourcePath = '@vendor/dynamikaweb/yii2-responsive-menu/assets';
+    public $sourcePath = '@vendor/dynamikasolucoesweb/yii2-responsive-menu/assets';
 
-    public array $files = [
+    public $files = [
         'forest' => 'menu-forest.html',
         'link' => 'menu-link.html',
         'root' => 'menu-root.html',
         'sub' => 'menu-sub.html'
     ];
 
-    public array $css = [
+    public $css = [
         'css/style.css'
     ];
 
-    public array $js = [
+    public $js = [
         'js/script.js',
         'js/dlmenu.js',
         'js/modernizr.js',
