@@ -10,10 +10,8 @@ class MenuAsset extends \yii\web\AssetBundle
         'wrapper' => 'menu-wrapper.html',
         'first' => 'menu-first.html',
         'second' => 'menu-second.html',
+        'third' => 'menu-third.html',
         'forest' => 'menu-forest.html',
-        'link' => 'menu-link.html',
-        //'root' => 'menu-root.html',
-        'sub' => 'menu-sub.html'
     ];
 
     public $css = [

@@ -11,7 +11,7 @@ class Menu extends \yii\base\Widget
 {
     const NIVEL_ROOT = 'r';
     const NIVEL_SUB = 's';
-    const NIVEL_URL = 'u';
+    const NIVEL_SUB_THIRD = 'l';
 
     public array $items = [];
     public int $maxItems = 5;
@@ -136,7 +136,7 @@ class Menu extends \yii\base\Widget
         {
             case self::NIVEL_ROOT: {
                 return implode("\n", array_map(fn($item) => $this->renderFile('first', [
-                    'items' => empty($item['items'])? null: Html::tag('span', $this->renderItems($item['items'], self::NIVEL_SUB), ['class' => 'dynamika-menu-span-items']),
+                    'items' => empty($item['items'])? null: Html::tag('ul', $this->renderItems($item['items'], self::NIVEL_SUB), ['class' => 'dl-submenu']),
                     'target' => $item['target'],
                     'label' => $item['label'],
                     'slug' => $item['slug'],
@@ -147,16 +147,17 @@ class Menu extends \yii\base\Widget
             }
             case self::NIVEL_SUB: {
                 return implode("\n", array_map(fn($item) => $this->renderFile('second', [
-                    'items' => $this->renderItems($item['items'], self::NIVEL_URL),
-                    'content' => empty($item['content'])? null: Html::tag('p', $item['content']),
-                    'label' => empty($item['label'])? null: Html::a("<h3>{$item['label']}</h3>", $item['url']),
-                    'slug' => $item['slug']
+                    'items' => empty($item['items'])? null: Html::tag('ul', $this->renderItems($item['items'], self::NIVEL_SUB_THIRD), ['class' => 'dl-submenu']),
+                    'target' => $item['target'],
+                    'label' => $item['label'],
+                    'slug' => $item['slug'],
+                    'url' => $item['url']
                 ]),
                     $items
                 ));
             }
-            case self::NIVEL_URL: {
-                return implode("\n", array_map(fn($item) => $this->renderFile('link', [
+            case self::NIVEL_SUB_THIRD: {
+                return implode("\n", array_map(fn($item) => $this->renderFile('third', [
                     'target' => $item['target'],
                     'label' => $item['label'],
                     'url' => $item['url']
