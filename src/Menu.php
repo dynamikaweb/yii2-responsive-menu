@@ -14,7 +14,6 @@ class Menu extends \yii\base\Widget
     const NIVEL_SUB_THIRD = 'l';
 
     public array $items = [];
-    public int $maxItems = 5;
 
     private $_asset;
     private string $_key_cache;
@@ -69,7 +68,6 @@ class Menu extends \yii\base\Widget
                 $newSubs[] = [
                     'label' => $label,
                     'url' => $url,
-                    'target' => $target,
                     'slug' => '_auto',
                     'content' => $oldRoot['content'],
                     'items' => []
@@ -78,39 +76,18 @@ class Menu extends \yii\base\Widget
 
             // create sub menus
             foreach ($oldRoot['items'] as $oldSub) {
-                // sub menu is a final link?
-                if(empty($oldSub['items']) && empty($oldSub['content'])){
-                    // last menu is no automatic or bigger
-                    if((empty($newSubs) || (isset($newSubs[array_key_last($newSubs)]['items']) && count($newSubs[array_key_last($newSubs)]['items']) >= $this->maxItems)
-                        || current($newSubs)['slug'] !== '_auto')) {
-                        $newSubs[] = ['slug' => '_auto', 'url' => 'javascript:;'];
-                    }
-                    // add menu as link
-                    $newSubs[array_key_last($newSubs)]['items'][] = [
-                        'url' => ArrayHelper::getValue($oldSub, 'url', 'javascript:;'),
-                        'target' => ArrayHelper::getValue($oldSub, 'target', '_self'),
-                        'label' => ArrayHelper::getValue($oldSub, 'label', '???'),
-                    ];
-                    continue;
-                }
-
                 // add sub menu normal
                 $newSubs[] = [
                     'slug' => Inflector::slug(ArrayHelper::getValue($oldSub, 'label', '_none')),
-                    'target' => ArrayHelper::getValue($oldSub, 'target', '_self'),
                     'url' => ArrayHelper::getValue($oldSub, 'url', 'javascript:;'),
                     'content' => ArrayHelper::getValue($oldSub, 'content', null),
                     'label' => ArrayHelper::getValue($oldSub, 'label', null),
+                    'target' => ArrayHelper::getValue($oldSub, 'target', null),
                     'items' => []
                 ];
 
                 // add links
                 foreach($oldSub['items'] as $item) {
-                    // balance quantity of links per sub menu
-                    if (count($newSubs[array_key_last($newSubs)]['items']) >= $this->maxItems) {
-                        $newSubs[] = ['slug' => '_auto', 'url' => 'javascript:;'];
-                    }
-
                     // add link to sub menu
                     $newSubs[array_key_last($newSubs)]['items'][] = [
                         'url' => ArrayHelper::getValue($item, 'url', 'javascript:;'),
