@@ -69,6 +69,7 @@ class Menu extends \yii\base\Widget
                 $newSubs[] = [
                     'label' => $label,
                     'url' => $url,
+                    'target' => $target,
                     'slug' => '_auto',
                     'content' => $oldRoot['content'],
                     'items' => []
@@ -96,6 +97,7 @@ class Menu extends \yii\base\Widget
                 // add sub menu normal
                 $newSubs[] = [
                     'slug' => Inflector::slug(ArrayHelper::getValue($oldSub, 'label', '_none')),
+                    'target' => ArrayHelper::getValue($oldSub, 'target', '_self'),
                     'url' => ArrayHelper::getValue($oldSub, 'url', 'javascript:;'),
                     'content' => ArrayHelper::getValue($oldSub, 'content', null),
                     'label' => ArrayHelper::getValue($oldSub, 'label', null),
