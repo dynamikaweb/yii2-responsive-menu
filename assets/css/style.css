@@ -31,13 +31,13 @@
 .dl-menuwrapper button {
 	background-color: #e38711;
 	border: none;
-	height: 40px !important;
+	height: 40px;
 	overflow: hidden;
 	position: relative;
 	outline: none;
 	right: -190px;
-    padding: 8px 25px !important;
-    border-radius: 6px !important;
+    padding: 8px 25px;
+    border-radius: 6px;
     cursor: pointer;
     color: #fff;
     font-weight: 900;
@@ -48,7 +48,7 @@
 }
 
 .dl-menuwrapper button:hover{
-    background-color: #e38711 !important;
+    background-color: #e38711;
 }
 
 .dl-menuwrapper ul {
