@@ -11,7 +11,6 @@ class MenuAsset extends \yii\web\AssetBundle
         'first' => 'menu-first.html',
         'second' => 'menu-second.html',
         'third' => 'menu-third.html',
-        'forest' => 'menu-forest.html',
     ];
 
     public $css = [
