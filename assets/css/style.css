@@ -13,7 +13,7 @@
 
 /* Common styles of menus */
 
-.dl-menuwrapper {
+.dynamika-menu-responsivo-wrapper {
 	width: 100%;
 	max-width: 300px;
 	float: left;
@@ -28,8 +28,8 @@
     z-index: 1000;
 }
 
-.dl-menuwrapper button {
-	background-color: #e38711;
+.dynamika-menu-responsivo-wrapper button {
+	background-color: rgb(0,90,70);
 	border: none;
 	height: 40px;
 	overflow: hidden;
@@ -47,26 +47,26 @@
     z-index: 99;
 }
 
-.dl-menuwrapper button:hover{
-    background-color: #e38711;
+.dynamika-menu-responsivo-wrapper button:hover{
+    background-color: rgb(0,90,70);
 }
 
-.dl-menuwrapper ul {
-	background-color: #e38711;
+.dynamika-menu-responsivo-wrapper ul {
+	background-color: rgb(0,90,70);
 }
 
-.dl-menuwrapper ul {
+.dynamika-menu-responsivo-wrapper ul {
 	padding: 0;
 	list-style: none;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
-.dl-menuwrapper li {
+.dynamika-menu-responsivo-wrapper li {
 	position: relative;
 }
 
-.dl-menuwrapper li a {
+.dynamika-menu-responsivo-wrapper li a {
 	display: block;
 	position: relative;
 	padding: 15px 20px;
@@ -77,17 +77,17 @@
 	outline: none !important;
 }
 
-.no-touch .dl-menuwrapper li a:hover {
+.no-touch .dynamika-menu-responsivo-wrapper li a:hover {
 	background: rgba(255,248,213,0.1);
 }
 
-.dl-menuwrapper li.dl-back > a {
+.dynamika-menu-responsivo-wrapper li.dl-back > a {
 	padding-left: 30px;
 	background: rgba(0,0,0,0.4);
 }
 
-.dl-menuwrapper li.dl-back:after,
-.dl-menuwrapper li > a:not(:only-child):after {
+.dynamika-menu-responsivo-wrapper li.dl-back:after,
+.dynamika-menu-responsivo-wrapper li > a:not(:only-child):after {
 	position: absolute;
 	top: 0;
 	line-height: 50px;
@@ -97,19 +97,19 @@
 	content: "\e000";
 }
 
-.dl-menuwrapper li.dl-back:after {
+.dynamika-menu-responsivo-wrapper li.dl-back:after {
 	left: 10px;
 	color: rgba(212,204,198,0.3);
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 
-.dl-menuwrapper li > a:after {
+.dynamika-menu-responsivo-wrapper li > a:after {
 	right: 10px;
 	color: rgba(0,0,0,0.35);
 }
 
-.dl-menuwrapper .dl-menu {
+.dynamika-menu-responsivo-wrapper .dl-menu {
 	margin: 5px 0 0 0;
 	position: absolute;
 	width: 100%;
@@ -121,11 +121,11 @@
 	backface-visibility: hidden;
 }
 
-.dl-menuwrapper .dl-menu.dl-menu-toggle {
+.dynamika-menu-responsivo-wrapper .dl-menu.dl-menu-toggle {
 	transition: all 0.3s ease;
 }
 
-.dl-menuwrapper .dl-menu.dl-menuopen {
+.dynamika-menu-responsivo-wrapper .dl-menu.dl-menuopen {
 	opacity: 1;
 	pointer-events: auto;
 	-webkit-transform: translateY(0px);
@@ -133,7 +133,7 @@
 }
 
 /* Hide the inner submenus */
-.dl-menuwrapper li .dl-submenu {
+.dynamika-menu-responsivo-wrapper li .dl-submenu {
 	display: none;
 }
 
@@ -159,7 +159,7 @@ All this is done for any sub-level being entered.
 }
 
 /* Dynamically added submenu outside of the menu context */
-.dl-menuwrapper > .dl-submenu {
+.dynamika-menu-responsivo-wrapper > .dl-submenu {
 	position: absolute;
 	width: 100%;
 	top: 50px;
@@ -250,7 +250,7 @@ All this is done for any sub-level being entered.
 }
 
 
-.dl-menuwrapper > .dl-submenu.dl-animate-in-1 {
+.dynamika-menu-responsivo-wrapper > .dl-submenu.dl-animate-in-1 {
 	-webkit-animation: SubMenuAnimIn1 0.4s ease;
 	animation: SubMenuAnimIn1 0.4s ease;
 }
@@ -282,7 +282,7 @@ All this is done for any sub-level being entered.
 }
 
 
-.dl-menuwrapper > .dl-submenu.dl-animate-out-1 {
+.dynamika-menu-responsivo-wrapper > .dl-submenu.dl-animate-out-1 {
 	-webkit-animation: SubMenuAnimOut1 0.4s ease;
 	animation: SubMenuAnimOut1 0.4s ease;
 }
@@ -314,28 +314,28 @@ All this is done for any sub-level being entered.
 
 /*----- 1200/1399 -----*/
 @media (min-width: 1200px) and (max-width: 1399px) {
-    .dl-menuwrapper{
+    .dynamika-menu-responsivo-wrapper{
         display: none;
     }
 }
 
 /*----- 1400/1679 -----*/
 @media (min-width: 1400px) and (max-width: 1679px) {
-    .dl-menuwrapper{
+    .dynamika-menu-responsivo-wrapper{
         display: none;
     }
 }
 
 /*----- 1680/1920 -----*/
 @media (min-width: 1680px) and (max-width: 1920px) {
-    .dl-menuwrapper{
+    .dynamika-menu-responsivo-wrapper{
         display: none;
     }
 }
 
 /*----- MAIS DE 1920 -----*/
 @media (min-width: 1921px) {
-    .dl-menuwrapper{
+    .dynamika-menu-responsivo-wrapper{
         display: none;
     }
 }
