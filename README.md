@@ -1,10 +1,10 @@
 dynamikasolucoesweb/yii2-responsive-menu
 =========================
-![php version](https://img.shields.io/packagist/php-v/dynamikaweb/yii2-adaptive-menu)
-![pkg version](https://img.shields.io/packagist/v/dynamikaweb/yii2-adaptive-menu)
-![license](https://img.shields.io/packagist/l/dynamikaweb/yii2-adaptive-menu)
-![quality](https://img.shields.io/scrutinizer/quality/g/dynamikaweb/yii2-adaptive-menu)
-![build](https://img.shields.io/scrutinizer/build/g/dynamikaweb/yii2-adaptive-menu)
+![php version](https://img.shields.io/packagist/php-v/dynamikasolucoesweb/yii2-adaptive-menu)
+![pkg version](https://img.shields.io/packagist/v/dynamikasolucoesweb/yii2-adaptive-menu)
+![license](https://img.shields.io/packagist/l/dynamikasolucoesweb/yii2-adaptive-menu)
+![quality](https://img.shields.io/scrutinizer/quality/g/dynamikasolucoesweb/yii2-adaptive-menu)
+![build](https://img.shields.io/scrutinizer/build/g/dynamikasolucoesweb/yii2-adaptive-menu)
 
 Installation
 ------------
